@@ -4,4 +4,4 @@ numpy
 cvzone
 Pillow
 google-generativeai
-mediapipe
+mediapipe==0.10.0
