@@ -4,3 +4,4 @@ numpy
 cvzone
 Pillow
 google-generativeai
+mediapipe
