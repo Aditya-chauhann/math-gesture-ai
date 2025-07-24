@@ -14,7 +14,13 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 # Initialize Streamlit
 st.title("MATH GESTURE AI")
 st.sidebar.title("Options")
-
+@st.cache_resource
+def init_hand_detector():
+    return mp.solutions.hands.Hands(
+        static_image_mode=False,
+        max_num_hands=1,
+        min_detection_confidence=0.5
+    )
 # Sidebar options
 start_camera = st.sidebar.button("Start Camera")
 submit_canvas = st.sidebar.button("Submit Canvas to AI")
